@@ -1,2 +1,10 @@
-<h1>Blogs#show</h1>
-<p>Find me in app/views/blogs/show.html.erb</p>
+<div class="card my-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= @blog.title %></h5>
+    <div>
+      <%= link_to '編集', edit_blog_path(@blog) %>
+      <%= link_to '削除', blog_path(@blog), method: :delete, data: { confirm: '削除でよいか？' } %>
+    </div>
+    <%= simple_format @blog.content, class: 'card-text' %>
+  </div>
+</div>
