@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+def blog_content
+  <<~EOF
+    DIVE INTO CODEはアットホームな雰囲気があるらしいです。
+
+    メンターが頑張って教えてくれるので助かります。
+
+    頑張ってコースを受講したら、就職することができました。
+
+    DIVE INTO CODEよかったです。
+  EOF
+end
+
+20.times do
+  Blog.create(title: 'DIVE INTO CODEに入校してみた', content: blog_content)
+end
