@@ -3,12 +3,15 @@
     <div class="card-title d-flex justify-content-between">
       <h5><%= @blog.title %></h5>
       <div class="d-flex justify-content-around">
-        <%= link_to '編集', edit_blog_path(@blog), class: 'btn btn-outline-success' %>
-        <%= link_to '削除', blog_path(@blog),
-                    method: :delete,
-                    class: 'btn btn-outline-danger ml-1',
-                    data: { confirm: '削除でよいか？' } %>
         <% if user_signed_in? %>
+          <% if @blog.permit_access?(current_user) %>
+            <%= link_to '編集', edit_blog_path(@blog), class: 'btn btn-outline-success' %>
+            <%= link_to '削除', blog_path(@blog),
+                        method: :delete,
+                        class: 'btn btn-outline-danger ml-1',
+                        data: { confirm: '削除でよいか？' } %>
+          <% end %>
+        
           <div id="js-blog-favorite" class="ml-1">
             <%= render 'blogs/favorite', blog: @blog %>
           </div>
@@ -31,6 +34,12 @@
 </div>
 
 <%= render 'blogs/comments', comments: @blog.comments %>
-<%= render 'blogs/comment_form',
-           comment: @blog.comments.build,
-           action_path: blog_comments_path(@blog) %>
+<% if user_signed_in? %>
+  <%= render 'blogs/comment_form',
+            comment: @blog.comments.build,
+            action_path: blog_comments_path(@blog) %>
+<% else %>
+  <%= link_to 'コメントをするには会員登録が必要です',
+              new_user_registration_path,
+              class: 'btn btn-success btn-block my-4' %>
+<% end %>

@@ -5,4 +5,8 @@ class Blog < ApplicationRecord
   has_many :favorited_users, through: :favorites, source: :user
 
   validates :title, :content, presence: true
+
+  def permit_access?(user)
+    self.user == user
+  end
 end
