@@ -8,3 +8,8 @@
     <%= simple_format @blog.content, class: 'card-text' %>
   </div>
 </div>
+
+<%= render 'blogs/comments', comments: @blog.comments %>
+<%= render 'blogs/comment_form',
+           comment: @blog.comments.build,
+           action_path: blog_comments_path(@blog) %>

@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
 
-  resources :blogs, except: :index
+  resources :blogs, except: :index, shallow: true do
+    resources :comments, only: [:create, :update, :destroy]
+  end
 end
