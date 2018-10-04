@@ -6,10 +6,14 @@
           <%= image_tag blog.user.display_profile_image, class: 'mr-3', size: '64x64' %>
           <div class="media-body">
             <h5 class="mt-0"><%= blog.title %></h5>
-            <%= blog.content %>
+            <%= truncate(blog.content, length: 100) %>
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
+
+  <div class="d-flex justify-content-center mt-4">
+    <%= paginate @blogs %>
+  </div>
 </div>
