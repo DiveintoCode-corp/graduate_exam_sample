@@ -18,6 +18,20 @@ def blog_content
   EOF
 end
 
-20.times do
-  Blog.create(title: 'DIVE INTO CODEに入校してみた', content: blog_content)
+users = []
+10.times do |i|
+  users << User.create(
+    email: "test#{i}@example.com",
+    name: Faker::Name.name,
+    password: 'password'
+  )
+end
+
+users.each do |user|
+  rand(4).times do
+    user.blogs.create(
+      title: Faker::Book.title,
+      content: Faker::Markdown.sandwich(rand(10..30))
+    )
+  end
 end
