@@ -13,6 +13,13 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name,
+                      class: 'form-control',
+                      placeholder: 'DIVE太郎' %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> 文字以上)</em>
