@@ -1,0 +1,23 @@
+<% if blog.favorites.exists?(user_id: current_user.id) %>
+  <%= link_to "★ #{blog.favorites.count}",
+              blog_favorite_path(blog),
+              title: 'お気に入りを解除',
+              data: {
+                toggle: 'tooltip',
+                placement: 'bottom'
+              },
+              class: 'btn btn-warning',
+              method: :delete,
+              remote: true %>
+<% else %>
+  <%= link_to "★ #{blog.favorites.count}",
+              blog_favorites_path(blog),
+              title: 'お気に入りにする',
+              data: {
+                toggle: 'tooltip',
+                placement: 'bottom'
+              },
+              class: 'btn btn-outline-secondary',
+              method: :post,
+              remote: true %>
+<% end %>

@@ -1,10 +1,30 @@
 <div class="card my-4">
   <div class="card-body">
-    <h5 class="card-title"><%= @blog.title %></h5>
-    <div>
-      <%= link_to '編集', edit_blog_path(@blog) %>
-      <%= link_to '削除', blog_path(@blog), method: :delete, data: { confirm: '削除でよいか？' } %>
+    <div class="card-title d-flex justify-content-between">
+      <h5><%= @blog.title %></h5>
+      <div class="d-flex justify-content-around">
+        <%= link_to '編集', edit_blog_path(@blog), class: 'btn btn-outline-success' %>
+        <%= link_to '削除', blog_path(@blog),
+                    method: :delete,
+                    class: 'btn btn-outline-danger ml-1',
+                    data: { confirm: '削除でよいか？' } %>
+        <% if user_signed_in? %>
+          <div id="js-blog-favorite" class="ml-1">
+            <%= render 'blogs/favorite', blog: @blog %>
+          </div>
+        <% end %>
+      </div>
     </div>
+
+    <div class="my-3">
+      <b class="text-bold">
+        <%= @blog.user.name%>
+      </b>
+      <span class="ml-2 text-muted">
+        <%= l(@blog.created_at, format: :long) %> 投稿
+      </span>
+    </div>
+
     <%= simple_format @blog.content, class: 'card-text' %>
   </div>
 </div>
