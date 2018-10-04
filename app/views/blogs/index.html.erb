@@ -1,6 +1,6 @@
 <div class="container my-4">
   <% @blogs.each do |blog| %>
-    <%= link_to blog_path(blog), class: 'card mb-2' do %>
+    <%= link_to blog_path(blog), class: 'card mb-2 blog-list-item' do %>
       <div class="card-body">
         <div class="media">
           <%= image_tag blog.user.display_profile_image, class: 'mr-3', size: '64x64' %>
