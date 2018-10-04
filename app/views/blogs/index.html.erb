@@ -3,7 +3,7 @@
     <%= link_to blog_path(blog), class: 'card mb-2' do %>
       <div class="card-body">
         <div class="media">
-          <%= image_tag 'default_user_icon.png', class: 'mr-3', size: '64x64' %>
+          <%= image_tag blog.user.display_profile_image, class: 'mr-3', size: '64x64' %>
           <div class="media-body">
             <h5 class="mt-0"><%= blog.title %></h5>
             <%= blog.content %>

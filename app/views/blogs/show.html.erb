@@ -17,7 +17,8 @@
     </div>
 
     <div class="my-3">
-      <b class="text-bold">
+      <%= image_tag @blog.user.display_profile_image, size: '40x40' %>
+      <b class="text-bold ml-2">
         <%= @blog.user.name%>
       </b>
       <span class="ml-2 text-muted">

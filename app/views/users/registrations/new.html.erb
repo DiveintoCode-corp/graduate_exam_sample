@@ -39,6 +39,20 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :profile_image %>
+    <%= f.file_field :profile_image %>
+    <!-- <div class="input-group">
+      <div class="custom-file">
+        <%#= f.file_field :profile_image,
+                        class: 'custom-file-input',
+                        id: 'profile_image_uploader' %>
+        <label class="custom-file-label" for="profile_image_uploader">画像を選択…</label>
+      </div>
+    </div> -->
+    <%= f.hidden_field :profile_image_cache %>
+  </div>
+
+  <div class="form-group">
     <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
   </div>
 <% end %>

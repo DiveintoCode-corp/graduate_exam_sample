@@ -39,12 +39,14 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'kaminari'
 gem 'jquery-rails'
 
+# herokuでテストデータ流し込みたいのでproductionで使えるようにした
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem 'faker'
 end
 
 group :development do

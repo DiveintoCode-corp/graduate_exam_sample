@@ -23,15 +23,22 @@ users = []
   users << User.create(
     email: "test#{i}@example.com",
     name: Faker::Name.name,
-    password: 'password'
+    password: 'password',
+    remote_profile_image_url: Faker::Avatar.image
   )
 end
 
 users.each do |user|
   rand(4).times do
-    user.blogs.create(
+    blog = user.blogs.create(
       title: Faker::Book.title,
       content: Faker::Markdown.sandwich(rand(10..30))
     )
+    rand(4).times do
+      blog.comments.create(
+        user_id: users.sample.id,
+        content: Faker::Markdown.sandwich(rand(10..20))
+      )
+    end
   end
 end

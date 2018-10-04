@@ -1,28 +1,31 @@
-<% comments.each do |comment| %>
-  <div class="card my-4">
-    <div class="card-body">
-      <div class="media">
-        <%= image_tag 'default_user_icon.png', class: 'mr-3', size: '64x64' %>
-        <div class="media-body">
-          <div class="d-flex justify-content-between">
-            <h5 class="mt-0">
-              <%= comment.user.name %>
-              <small class="text-muted">
-                <%= l(comment.created_at, format: :long) %> 投稿
-              </small>
-            </h5>
-            <div>
-              <a href="#" class="btn btn-outline-success">編集</a>
-              <%= link_to '削除',
-                          comment_path(comment),
-                          method: :delete,
-                          class: 'btn btn-outline-danger',
-                          data: { confirm: '削除しますか？' } %>
+<% if comments.any?%>
+  <h4 class="ml-4">コメント一覧(<%= comments.size %>件)</h4>
+  <% comments.each do |comment| %>
+    <div class="card my-4">
+      <div class="card-body">
+        <div class="media">
+          <%= image_tag comment.user.display_profile_image, class: 'mr-3', size: '64x64' %>
+          <div class="media-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="mt-0">
+                <%= comment.user.name %>
+                <small class="text-muted">
+                  <%= l(comment.created_at, format: :long) %> 投稿
+                </small>
+              </h5>
+              <div>
+                <a href="#" class="btn btn-outline-success">編集</a>
+                <%= link_to '削除',
+                            comment_path(comment),
+                            method: :delete,
+                            class: 'btn btn-outline-danger',
+                            data: { confirm: '削除しますか？' } %>
+              </div>
             </div>
+            <%= simple_format comment.content %>
           </div>
-          <%= simple_format comment.content %>
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
