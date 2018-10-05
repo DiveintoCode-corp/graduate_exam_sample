@@ -13,9 +13,16 @@
             </a>
           </div>
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to 'ブログ投稿', new_blog_path, class: 'dropdown-item' %>
-            <%= link_to 'ユーザー情報編集', '#', class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+            <%= link_to new_blog_path, class: 'dropdown-item' do %>
+              <%= fa_icon 'plus-square', text: 'ブログ投稿' %>
+            <% end %>
+            <%= link_to '#', class: 'dropdown-item' do %>
+              <%= fa_icon 'user', text: 'ユーザー情報編集' %>
+            <% end %>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-block' %>
+            </div>
           </div>
         </li>
       </ul>
