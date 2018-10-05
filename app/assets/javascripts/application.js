@@ -17,7 +17,14 @@
 //= require activestorage
 //= require_tree .
 
-
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+$('[data-toggle="tooltip"]').on({
+  'mouseenter' : function(){
+    $(this).tooltip('show')
+  },
+  'mouseleave' : function(){
+    $(this).tooltip('hide')
+  },
+  'click' : function() {
+    $(this).tooltip('hide')
+  }
+})
