@@ -36,16 +36,16 @@ Rails 5.2.1
 - [ ] コメント機能とお気に入り機能についてはページ遷移なしで実行できる
 
 ## カタログ設計
-https://docs.google.com/a/diveintocode.jp/spreadsheets/d/e/2PACX-1vTxGgDqcFi7os0i3QAaQlG19hjAo8K3lMthr8nnSGP1TcAdSA2I1wchkTgKM8GKh4Ws9VfgzNVl-sRy/pubhtml
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQRNOY03ypjIxTthuBAq_pKatH-w-vyCbr_It0KMQrlU1ReItaus1DUbHTiFMKFv4aEKWN6vssLElaC/pubhtml
 
 ## テーブル定義
-https://docs.google.com/a/diveintocode.jp/spreadsheets/d/e/2PACX-1vQTwxfxEoE4hCwhQtOi7HeeiZkKvbh4oKuMYdvw9Ev24AzzC8W8O2aXSRry0vVwLkUKusIVSmHTDegC/pubhtml
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTQJC1TV38hLwTivc5LreMtPzjxj9OpqrFgVkYysZXHb1FttKg2MSbUP6r-U8-7noU52UHzQRxsY_SE/pubhtml
 
 ## 画面遷移図
-https://docs.google.com/a/diveintocode.jp/spreadsheets/d/e/2PACX-1vRJbrky6f6C4HGnyuuwEXg7E_wyd8HFTlIghuLrEaxVv4R9b-QDhvrnX5I3HZikow6e86GDUC0kboLH/pubhtml
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTLVdnF81Q_O93ebHGBfckJJhjXO4EKeHcYtX1mRxl3bk0ILjeOdI_pwmlmUeOI_aUBezdSoi_YJe71/pubhtml
 
 ## 画面ワイヤーフレーム
-https://docs.google.com/a/diveintocode.jp/spreadsheets/d/e/2PACX-1vQJnEowPtDPD2jusOZ6A69Ot8_FD1PM8sh2VGhMwbZ0yKbyt9but9x5WWI2EgNHp9gy22mBC8IO9kwf/pubhtml
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQW9UJIBgpQ7Ijd9oAv-vZYcxsO0X8r9bM9zWLJ4IOYV9aLLgRwe6T24Ae9gjOF-8gdesbHqiBhHtRi/pubhtml
 
 ## 使用予定Gem
 * carrierwave
