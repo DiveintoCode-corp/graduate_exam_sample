@@ -51,3 +51,51 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vQW9UJIBgpQ7Ijd9oAv-vZYcxsO0X8r9
 * carrierwave
 * mini_magick
 * devise
+
+
+# English Ver
+
+# README
+
+# Easy blog
+
+## Overview
+Blog service specialized in only posting titles and articles.
+You can favorite blogs and make comments.
+
+## Concept
+Simple blog
+
+## Version
+Ruby 2.5.1
+Rails 5.2.1
+
+## Functions list
+- [ ] Login function
+- [ ] User registration function
+  - [ ] Email address, name and password are required
+- [ ] Password reset function
+- [ ] Blog list display function
+  - [ ] Show number of comments
+  - [ ] Show number of favorites
+- [ ] Blog post function
+  - [ ] Title and article content is required
+- [ ] Blog edit function
+- [ ] Blog deletion function
+  - [ ] Posters can only do blog edit and blog deletion
+- [ ] Blog favorite function
+  - [ ] You can favorite only once per one blog
+  - [ ] You can't favorite your own blog
+- [ ] Comment post function
+- [ ] Comment deletion function
+- [ ] Comment edit function
+  - [ ] Only comment contributors can edit and delete comments
+- [ ] The comment function and favorite function can be executed without page transition.
+
+## Catalog design,Table_Definition,Screen transition diagram,,Wire frame
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTGKOadM3Fs07EUHVn-wNuoifjG6Fg21eoFzrCeAvk9--izoHl5AmePPNw6sMWCEAKWbY2cGMXzfaHy/pubhtml
+
+## To be used Gem
+* carrierwave
+* mini_magick
+* devise
