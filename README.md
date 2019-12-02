@@ -93,7 +93,7 @@ Rails 5.2.1
 - [ ] The comment function and favorite function can be executed without page transition.
 
 ## Catalog design,Table_Definition,Screen transition diagram,,Wire frame
-https://docs.google.com/spreadsheets/d/e/2PACX-1vTGKOadM3Fs07EUHVn-wNuoifjG6Fg21eoFzrCeAvk9--izoHl5AmePPNw6sMWCEAKWbY2cGMXzfaHy/pubhtml
+https://docs.google.com/spreadsheets/d/1V3sqZjVF5Oep0ek7hkLYGuIKSnhiTLqTbq46GpjP94E/edit#gid=0
 
 ## To be used Gem
 * carrierwave
